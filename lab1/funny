@@ -1,0 +1,24 @@
+                       NOTES FROM THE MACHINE ROOM
+                       ---------------------------
+
+ 1. The shell does exactly what you typed, which is rarely what you meant.
+
+ 2. There are two kinds of Unix users: those who back up their files, and
+    those who have not lost any yet.
+
+ 3. A directory is just a file that lists other files. Everyhting is a file.    FIXME
+
+ 4. rm does not ask "are you sure?"  It assumes you were.
+
+ 5. The manual is not hidden. It is right there, under man. Almost nobody
+    reads it, which is why the people who do look like wizards.
+
+ 6. Tab completion exists so that you nevr have to type a long filename twice.    FIXME
+
+ 7. Permisions are not there to keep you out, but everyone else.    FIXME
+
+ 8. If a command prints nothing, it worked. Probably.
+
+ 9. The cursor keys are for people who are not in a hurry.
+
+10. Nobody has ever quit vim on the first try. You are not alone.

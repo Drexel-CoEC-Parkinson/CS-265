@@ -1,0 +1,27 @@
+" ~/.vimrc -- CS-265 starting configuration.
+" Install as ~/.vimrc (note the leading dot).
+" In this file, a line that starts with a double quote is a comment.
+
+set nocompatible            " vim behavior, not 1970s vi behavior
+syntax on                   " color C, shell, HTML, and config files by language
+filetype plugin indent on   " language-aware indenting
+
+set ruler                   " line,column in the bottom right
+set showcmd                 " show a partially typed command in the corner
+set showmode                " show -- INSERT -- when you're in insert mode
+set number                  " line numbers on the left (:set nonumber to hide)
+set scrolloff=3             " keep 3 lines visible above and below the cursor
+set backspace=indent,eol,start
+
+set incsearch               " jump to matches as you type a / search
+set hlsearch                " highlight every match (:noh clears it)
+set ignorecase              " searches ignore case...
+set smartcase               " ...unless the pattern contains a capital letter
+
+set autoindent              " new lines keep the indent of the line above
+set tabstop=4               " a tab character is shown 4 columns wide
+set shiftwidth=4            " >> and << shift by 4 columns
+
+" If your terminal has a DARK background and colors are hard to read,
+" delete the double quote at the start of the next line:
+"set background=dark

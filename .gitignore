@@ -1,0 +1,12 @@
+# Editor and build leftovers
+*.swp
+*.swo
+*~
+*.o
+a.out
+.DS_Store
+# Student work must never land in the repo
+lab*/lab*.txt
+lab*/vi_lab.txt
+lab*/roundtrip.txt
+lab*/box/
