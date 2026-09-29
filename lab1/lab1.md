@@ -159,7 +159,9 @@ If you ever see **E325: ATTENTION … Found a swap file**, an earlier vim sessio
 
    Use `:saveas`, not `:w vi_lab.txt`. `:saveas` switches vim over to the new file, so every later save goes into `vi_lab.txt`. (`:w vi_lab.txt` would only save a copy, and your later saves would go to a temporary file that is deleted when you quit.)
 
-3. Work through the whole tutorial (about 30 minutes), doing each edit it asks for. Save often with **Esc :w Enter**. To come back later: `vi ~/CS265/lab1/vi_lab.txt`.
+3. Work through the whole tutorial (about 30 minutes), doing each edit it asks for. Save often with **Esc :w Enter**. To come back later: `vim ~/CS265/lab1/vi_lab.txt`.
+
+   When you reach **Lesson 7.2 (Create a startup script)**, read it but **don't do its steps**. You already installed a `.vimrc` in Part 3.
 
 **Q4** Write "done" when `vi_lab.txt` is complete and saved in `~/CS265/lab1`.
 
@@ -167,13 +169,13 @@ If you ever see **E325: ATTENTION … Found a swap file**, an earlier vim sessio
 
 The file `funny` has three typos, each on a line marked `FIXME`.
 
-1. `vi funny`
+1. `vim funny`
 2. Type `/FIXME` and press Enter to jump to the first one. `n` jumps to the next.
 3. Fix the typo (`x` deletes a letter, `r` replaces one, `i` inserts).
 4. Put the cursor on the space before `FIXME` and press `D` to delete to the end of the line.
 5. Do the other two, then **Esc :wq Enter**.
 
-**Q5** Paste the three corrected lines.
+**Q5** Put the three corrected lines in your answer sheet. Open `lab1.txt` in vim and move the cursor to the Q5 line. Type **:r funny Enter** to pull in the whole file below it (vimtutor Lesson 5.4), then use `dd` to delete every line of `funny` except the three you fixed. Save with **Esc :wq Enter**.
 
 ---
 
@@ -267,6 +269,8 @@ cat box/note.txt
 chmod 700 box
 ```
 
+Under `600`, `ls box` may print a `cannot access` error *and* the name `note.txt`. Count that as working: the name came through, and the error is `ls` failing to look inside the file for details.
+
 **Q9** For `600` and for `100`, which of `ls box` and `cat box/note.txt` worked? Which letter lets you *list* a directory, and which lets you *get to the files* inside?
 
 **Q10** Which `chmod` command would let everyone read a file, but only you change it?
@@ -295,6 +299,6 @@ chmod 700 box
 ### Before you leave
 
 - [ ] You can ssh to tux from your own laptop.
-- [ ] `roundtrip.txt` is uploaded to Canvas.
+- [ ] You uploaded `roundtrip.txt` to the round trip check on Canvas in Part 2. (Deleting the tux copy in Part 7 doesn't affect it.)
 - [ ] Log out, log back in, and `set -o | grep vi` still says `on`.
 - [ ] You can open a file in vim, change it, save, and quit without looking at this handout.
