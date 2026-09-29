@@ -1,0 +1,41 @@
+CS-265  Lab 1 -- Moving In
+
+Name:
+Drexel ID:
+Section:
+
+Answer below each question. Leave a blank line between answers.
+Paste command output exactly as it appeared.
+
+-------------------------------------------------------------------------
+
+Q1  Output of  ls -ld ~/CS265
+
+
+Q2  The scp command you ran.
+
+
+Q3  Message from  echo again > roundtrip.txt , and which setting causes it.
+
+
+Q4  vi_lab.txt complete and saved (write "done").
+
+
+Q5  The three corrected lines from funny.
+
+
+Q6  What printed, and what k, 0, w, and cw did.
+
+
+Q7  What you, your group, and others can do with ~/CS265.
+
+
+Q8  What happened running ./hello.bash, and why. Output after chmod u+x.
+
+
+Q9  For 600 and 100: did  ls box  work? did  cat box/note.txt  work?
+    Which letter lists a directory, and which gets to the files inside?
+
+
+Q10 chmod command that lets everyone read a file but only you change it.
+
