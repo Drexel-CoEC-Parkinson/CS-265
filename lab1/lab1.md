@@ -14,19 +14,19 @@ Upload two plain-text files to the **Lab 1** assignment on Canvas:
 
 ### Conventions
 
-- `$` is the shell prompt. Don't type it.
+- Code blocks show exactly what to type. You can copy and paste them.
 - `abc123` stands for your Drexel user ID. Use your own.
-- Commands marked **(laptop)** run on *your own computer*. Everything else runs on tux.
+- Commands run on tux unless the step says **on your laptop**.
 - Vim keys are written like **Esc :wq Enter**. Press them in order.
 
 ---
 
 ## Part 1 — Move in
 
-1. From your laptop, log in to tux:
+1. **On your laptop**, log in to tux:
 
    ```
-   $ ssh abc123@tux.cs.drexel.edu        (laptop)
+   ssh abc123@tux.cs.drexel.edu
    ```
 
    If ssh isn't working, see **[Connecting to tux — Canvas page]**.
@@ -34,14 +34,14 @@ Upload two plain-text files to the **Lab 1** assignment on Canvas:
 2. Make your course directory and make it private:
 
    ```
-   $ mkdir ~/CS265
-   $ chmod 700 ~/CS265
+   mkdir ~/CS265
+   chmod 700 ~/CS265
    ```
 
 3. Get the course materials. This makes your own copy of the instructor's files:
 
    ```
-   $ git clone https://github.com/Drexel-CoEC-Parkinson/CS-265 ~/CS265/materials
+   git clone https://github.com/Drexel-CoEC-Parkinson/CS-265 ~/CS265/materials
    ```
 
    You don't need to understand `git` yet. Two rules:
@@ -52,11 +52,11 @@ Upload two plain-text files to the **Lab 1** assignment on Canvas:
 4. Make a directory for this lab and copy the Lab 1 files into it:
 
    ```
-   $ mkdir ~/CS265/lab1
-   $ cd ~/CS265/lab1
-   $ cp ~/CS265/materials/lab1/* .
-   $ mv lab1_template.txt lab1.txt
-   $ ls
+   mkdir ~/CS265/lab1
+   cd ~/CS265/lab1
+   cp ~/CS265/materials/lab1/* .
+   mv lab1_template.txt lab1.txt
+   ls
    ```
 
    You should see `README.md`, `funny`, `hello.bash`, `lab1.md`, and `lab1.txt`.
@@ -72,13 +72,13 @@ Every lab is submitted the same way: copy your files from tux to your laptop wit
 1. On tux, make a test file:
 
    ```
-   $ echo "round trip test from abc123" > roundtrip.txt
+   echo "round trip test from abc123" > roundtrip.txt
    ```
 
-2. On your laptop, open a **second** terminal window (not the one logged in to tux) and run:
+2. **On your laptop**, open a **second** terminal window (not the one logged in to tux) and run:
 
    ```
-   $ scp abc123@tux.cs.drexel.edu:CS265/lab1/roundtrip.txt .        (laptop)
+   scp abc123@tux.cs.drexel.edu:CS265/lab1/roundtrip.txt .
    ```
 
    This means: from *user*@*machine*:*path*, copy to `.` (the current folder here).
@@ -96,18 +96,18 @@ Every lab is submitted the same way: copy your files from tux to your laptop wit
 When bash starts, it reads settings from a file in your home directory called `.bashrc`. We provide three settings files. Install them, saving a backup of any file you already have:
 
 ```
-$ cd ~
-$ mv .bashrc .bashrc.ORIG
-$ cp ~/CS265/materials/dotfiles/bashrc .bashrc
-$ cp ~/CS265/materials/dotfiles/inputrc .inputrc
-$ cp ~/CS265/materials/dotfiles/vimrc .vimrc
-$ . ~/.bashrc
+cd ~
+mv .bashrc .bashrc.ORIG
+cp ~/CS265/materials/dotfiles/bashrc .bashrc
+cp ~/CS265/materials/dotfiles/inputrc .inputrc
+cp ~/CS265/materials/dotfiles/vimrc .vimrc
+. ~/.bashrc
 ```
 
 The last line (a dot, a space, then the path) loads the new settings into your current shell. Check it worked:
 
 ```
-$ set -o | grep vi
+set -o | grep vi
 ```
 
 You should see `vi  on`. If not, ask for help.
@@ -124,7 +124,7 @@ The new `.bashrc` changes a few things you'll notice all term:
 Go back to your lab directory:
 
 ```
-$ cd ~/CS265/lab1
+cd ~/CS265/lab1
 ```
 
 **Q3** Run `echo again > roundtrip.txt`. What message do you get, and which setting causes it?
@@ -150,12 +150,14 @@ If you ever see **E325: ATTENTION … Found a swap file**, an earlier vim sessio
 1. Start the tutorial:
 
    ```
-   $ vimtutor
+   vimtutor
    ```
 
 2. **Save it under your own name right away**, or your work will be lost:
 
-   **Esc :w vi_lab.txt Enter**
+   **Esc :saveas vi_lab.txt Enter**
+
+   Use `:saveas`, not `:w vi_lab.txt`. `:saveas` switches vim over to the new file, so every later save goes into `vi_lab.txt`. (`:w vi_lab.txt` would only save a copy, and your later saves would go to a temporary file that is deleted when you quit.)
 
 3. Work through the whole tutorial (about 30 minutes), doing each edit it asks for. Save often with **Esc :w Enter**. To come back later: `vi ~/CS265/lab1/vi_lab.txt`.
 
@@ -165,7 +167,7 @@ If you ever see **E325: ATTENTION … Found a swap file**, an earlier vim sessio
 
 The file `funny` has three typos, each on a line marked `FIXME`.
 
-1. `$ vi funny`
+1. `vi funny`
 2. Type `/FIXME` and press Enter to jump to the first one. `n` jumps to the next.
 3. Fix the typo (`x` deletes a letter, `r` replaces one, `i` inserts).
 4. Put the cursor on the space before `FIXME` and press `D` to delete to the end of the line.
@@ -180,9 +182,9 @@ The file `funny` has three typos, each on a line marked `FIXME`.
 With `set -o vi`, you can use vim keys on the command line. Run these three commands:
 
 ```
-$ echo one fish
-$ echo two fish
-$ echo red fish
+echo one fish
+echo two fish
+echo red fish
 ```
 
 Now press these keys one at a time, then Enter:
@@ -198,7 +200,12 @@ Now press these keys one at a time, then Enter:
 ### Reading `ls -l`
 
 ```
-$ ls -l
+ls -l
+```
+
+You'll see something like this:
+
+```
 -rw-------  1 abc123 domain users  1462 Oct  1 09:25 funny
 -rw-------  1 abc123 domain users   231 Oct  1 09:25 hello.bash
 ```
@@ -236,7 +243,7 @@ You can also add or remove one permission: `chmod u+x file` adds execute for you
 Try running the script:
 
 ```
-$ ./hello.bash
+./hello.bash
 ```
 
 **Q8** What happened, and why? (Look at `ls -l hello.bash`.) Now run `chmod u+x hello.bash`, run the script again, and paste its output.
@@ -246,18 +253,18 @@ $ ./hello.bash
 Run these commands one at a time and note which ones fail:
 
 ```
-$ mkdir box
-$ echo "the note inside" > box/note.txt
+mkdir box
+echo "the note inside" > box/note.txt
 
-$ chmod 600 box
-$ ls box
-$ cat box/note.txt
+chmod 600 box
+ls box
+cat box/note.txt
 
-$ chmod 100 box
-$ ls box
-$ cat box/note.txt
+chmod 100 box
+ls box
+cat box/note.txt
 
-$ chmod 700 box
+chmod 700 box
 ```
 
 **Q9** For `600` and for `100`, which of `ls box` and `cat box/note.txt` worked? Which letter lets you *list* a directory, and which lets you *get to the files* inside?
@@ -271,7 +278,7 @@ $ chmod 700 box
 1. Delete the test file (answer `y` when asked):
 
    ```
-   $ rm roundtrip.txt
+   rm roundtrip.txt
    ```
 
 2. Check `lab1.txt` in vim: every question answered, blank line between answers.
@@ -279,8 +286,8 @@ $ chmod 700 box
 3. **On your laptop**, copy both files down:
 
    ```
-   $ scp abc123@tux.cs.drexel.edu:CS265/lab1/lab1.txt .      (laptop)
-   $ scp abc123@tux.cs.drexel.edu:CS265/lab1/vi_lab.txt .    (laptop)
+   scp abc123@tux.cs.drexel.edu:CS265/lab1/lab1.txt .
+   scp abc123@tux.cs.drexel.edu:CS265/lab1/vi_lab.txt .
    ```
 
 4. Upload `lab1.txt` and `vi_lab.txt` to the **Lab 1** assignment on Canvas.
