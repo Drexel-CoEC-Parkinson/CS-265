@@ -22,20 +22,35 @@ Record your answers in `lab2_template.txt`. Paste commands exactly as you ran th
 
 ## Part 0 — Setup
 
-Pull the latest materials and make a working directory for this lab:
+This lab's files are already in the course repository, in a folder called `lab2`. You do not create them — you pull them down and copy them out.
+
+First, update your copy of the repository:
 
 ```
 cd ~/CS265/materials
 git pull
+```
+
+You should now see a `lab2` folder there:
+
+```
+ls ~/CS265/materials/lab2
+```
+
+That folder is **read-only as far as you are concerned**. Never edit anything inside `~/CS265/materials` — the next `git pull` will fight with you over it. Instead, copy the files out to your own working directory:
+
+```
 mkdir ~/CS265/lab2
-cp -r lab2/* ~/CS265/lab2/
+cp -r ~/CS265/materials/lab2/* ~/CS265/lab2/
 cd ~/CS265/lab2
 ls
 ```
 
-Note the `-r` on `cp` — this lab ships a subdirectory, `gallery/`, and a plain `cp` would skip it.
+Yes, there are now two directories named `lab2`. `~/CS265/materials/lab2` is the course's copy and does not change. `~/CS265/lab2` is yours, and it is where you do all of your work and where your answers live. Every lab this term follows this same pattern.
 
-You should have: `gallery/` (a folder of exported photos and a toy C program), `visits.log` (a study-room door log — one username per visit, 40 lines), `lab2_template.txt`, and `README.md`.
+Note the `-r` on `cp` — this lab ships a subdirectory, `gallery/`, and a plain `cp` would skip it without telling you.
+
+After the copy, `ls` should show: `gallery/` (a folder of exported photos and a toy C program), `visits.log` (a study-room door log — one username per visit, 40 lines), `lab2_template.txt`, and `README.md`.
 
 Open `lab2_template.txt` in vim and fill it in as you go.
 
