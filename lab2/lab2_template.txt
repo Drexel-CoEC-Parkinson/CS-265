@@ -5,7 +5,13 @@ Name:
 Drexel username:
 Section:
 
-Instructions: Replace each ANSWER: line with your response. Paste commands
+Instructions: Rename this file to lab2.txt before you start:
+
+    mv lab2_template.txt lab2.txt
+
+lab2.txt is the file you submit to Canvas.
+
+Replace each ANSWER: line with your response. Paste commands
 exactly as you ran them and output exactly as it printed. Do not delete the
 question headings.
 

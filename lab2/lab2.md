@@ -6,7 +6,7 @@ Lab 1 got you onto tux and into vim. This lab is about the thing you have been t
 
 Everything here comes from the Week 2 lecture, *Introduction to the Bash Shell*. Keep the slides open while you work.
 
-Record your answers in `lab2_template.txt`. Paste commands exactly as you ran them and output exactly as it printed.
+Record your answers in `lab2.txt` (Part 0 shows you how to create it from the supplied template). Paste commands exactly as you ran them and output exactly as it printed.
 
 ## Learning goals
 
@@ -39,7 +39,13 @@ There are now two directories named `lab2`. The one in `~/CS265/materials` is th
 
 You should have: `gallery/` (a folder of exported photos and a toy C program), `visits.log` (a study-room door log — one username per visit, 40 lines), `lab2_template.txt`, and `README.md`.
 
-Open `lab2_template.txt` in vim and fill it in as you go.
+As in Lab 1, rename the template to the name you will submit:
+
+```
+mv lab2_template.txt lab2.txt
+```
+
+Open `lab2.txt` in vim and fill it in as you go. The file you hand in is `lab2.txt`.
 
 ---
 
@@ -261,20 +267,21 @@ Record your prediction, the actual output, and an explanation of why `drink` wen
 
 ## Part 8 — Submit
 
-Check that `lab2_template.txt` is complete — every question answered, commands pasted exactly as run.
+Check that `lab2.txt` is complete — every question answered, commands pasted exactly as run.
 
 Copy it from tux to your own machine. From a terminal **on your own machine** (not on tux), with your own username in place of `abc123`:
 
 ```
-scp abc123@tux.cs.drexel.edu:CS265/lab2/lab2_template.txt .
+scp abc123@tux.cs.drexel.edu:CS265/lab2/lab2.txt .
 ```
 
-Then upload `lab2_template.txt` to the Lab 2 assignment on Canvas.
+Then upload `lab2.txt` to the Lab 2 assignment on Canvas.
 
 **Checklist before you submit:**
 
-- [ ] All ten questions answered in `lab2_template.txt`
+- [ ] Template renamed with `mv lab2_template.txt lab2.txt`
+- [ ] All ten questions answered in `lab2.txt`
 - [ ] Commands pasted exactly as run, output exactly as printed
 - [ ] Q4's output line matches the target exactly, with your username expanded
 - [ ] Q10 includes your prediction, written before you ran the code
-- [ ] File uploaded to Canvas by Sunday 11:59 PM
+- [ ] `lab2.txt` uploaded to Canvas by Sunday 11:59 PM
