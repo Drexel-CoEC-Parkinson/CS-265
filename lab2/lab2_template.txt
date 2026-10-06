@@ -33,6 +33,7 @@ ANSWER:
 ANSWER:
 
 (b) What does type -a echo mean, and which one runs when you type echo?
+    How do you know the two echo -e commands were different programs?
 ANSWER:
 
 (c) Why does cd have to be a builtin?

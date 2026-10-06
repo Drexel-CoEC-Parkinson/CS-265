@@ -4,7 +4,7 @@
 
 Lab 1 got you onto tux and into vim. This lab is about the thing you have been typing into all along: **bash**. By the end you should understand what happens between pressing Enter and seeing output — how the shell finds a command, how it expands what you typed, where the three standard streams go, and how to connect commands to each other.
 
-Everything here comes from the Week 2 lecture, *Introduction to the Bash Shell*. Keep the slides open while you work.
+Nearly everything here comes from the Week 2 lecture, *Introduction to the Bash Shell*; the few tools that don't are explained where they appear. Keep the slides open while you work.
 
 Record your answers in `lab2.txt` (Part 0 shows you how to create it from the supplied template). Paste commands exactly as you ran them and output exactly as it printed.
 
@@ -58,7 +58,7 @@ Slide 9 claims some commands are handled by the shell itself and some are progra
 ```
 type cd
 type echo
-type ls
+type -a ls
 type -a echo
 ```
 
@@ -69,7 +69,7 @@ echo -e "one\ttwo"
 /usr/bin/echo -e "one\ttwo"
 ```
 
-Answer three things. (a) Which of `cd`, `echo`, and `ls` is a builtin, and which lives on disk? (b) `type -a echo` reports more than one answer — explain what that means and which one you get when you just type `echo`. (c) Why does `cd` *have* to be a builtin? Think about what `cd` changes and about slide 61: a disk program runs in a subshell.
+Answer three things. (a) Which of `cd`, `echo`, and `ls` is a builtin, and which lives on disk? (`type -a ls` may report an *alias* first — that is the course `.bashrc` from Lab 1 at work; the disk path is still in the list.) (b) `type -a echo` reports more than one answer — explain what that means and which one you get when you just type `echo`. The two `echo -e` commands printed the same thing; explain how you nonetheless know they were two different programs. (c) Why does `cd` *have* to be a builtin? Think about what `cd` changes and about slide 61: a disk program runs in a subshell.
 
 ---
 
@@ -91,7 +91,7 @@ Now deliberately make the classic mistake:
 course = CS-265
 ```
 
-Record the error message exactly. Explain what bash thought you were asking it to do.
+Record the message exactly. On tux it may be a bare `command not found` or a longer "did you mean…" suggestion; either way, explain what bash thought you were asking it to do.
 
 Finally, use **command substitution** (slide 20) to produce a single line that reads like this, with the real values filled in by the shell rather than typed by you:
 
@@ -212,7 +212,7 @@ tr a-z A-Z <<< "hello from $USER"
 
 Record the output.
 
-Finally, the experience every beginner has. Run `grep tux` by itself, with no filename, and watch what happens. The shell has not frozen — slide 33 explains it. Say what the program is actually doing, then get your prompt back with Ctrl-D and record what you pressed and why that works.
+Finally, the experience every beginner has. Run `grep tux` by itself, with no filename, and watch what happens. The shell has not frozen — slide 33 explains it. Say what the program is actually doing, then get your prompt back with Ctrl-D (press it on an empty line — if you have typed something, Ctrl-D once only flushes that text, and a second one is needed) and record what you pressed and why that works.
 
 ---
 
@@ -250,7 +250,7 @@ cp gallery/main.c copy.c && echo "Copy succeeded"
 cp no_such_file copy2.c 2> /dev/null || echo "Copy failed"
 ```
 
-Explain in one sentence each what `&&` and `||` do with the exit status of the command on their left.
+Explain in one sentence each what `&&` and `||` do with the exit status of the command on their left. (If you run the first line twice, `cp` will ask before overwriting `copy.c` — that is the `cp -i` alias from the course `.bashrc`, not part of this exercise.)
 
 Last, the subshell (slides 56 and 62). Predict the output of this *before* you run it, write your prediction down, then run it:
 
