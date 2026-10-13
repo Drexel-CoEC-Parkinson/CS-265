@@ -4,7 +4,7 @@
 **Released:** Tuesday, October 13, 2026
 **Due:** Sunday, November 8, 2026, 11:59 PM (submitted on Canvas)
 **Points:** 100 (15% of course grade)
-**Late policy:** −10 / −20 / −30 points per day late; not accepted after 4 days.
+**Late policy:** −10% / −20% / −30% per day late; not accepted after 4 days without prior discussions with me.
 
 ---
 
