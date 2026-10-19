@@ -7,7 +7,7 @@ Groups are fine; everyone submits their own answers on Canvas (text entry) by **
 ## Setup (1 min)
 
 ```bash
-cd ~/CS-265/materials && git pull
+cd ~/CS265/materials && git pull
 mkdir ~/CS265/activity3
 cd ~CS265/materials
 cp -r activity3/* ~/CS265/activity3/
