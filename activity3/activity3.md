@@ -8,8 +8,8 @@ Groups are fine; everyone submits their own answers on Canvas (text entry) by **
 
 ```bash
 cd ~/CS-265/materials && git pull
-cd activity3
 mkdir ~/CS265/activity3
+cd ~CS265/materials
 cp -r activity3/* ~/CS265/activity3/
 cd ~/CS265/activity3
 ```
