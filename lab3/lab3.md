@@ -5,7 +5,7 @@
 ## Setup
 
 ```bash
-cd ~/CS-265 && git pull
+cd ~/CS265/materials && git pull
 cp -r lab3 ~/lab3 && cd ~/lab3
 cp lab3_template.txt lab3.txt
 ```
