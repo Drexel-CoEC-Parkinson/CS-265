@@ -1,1 +1,162 @@
-
+CS-265 Lab 3 — Regular Expressions, with a Side of sed and AWK
+Answer Template
+ 
+Name:
+Drexel username:
+Section:
+ 
+Instructions: Copy this file to lab3.txt before you start:
+ 
+    cp lab3_template.txt lab3.txt
+ 
+lab3.txt is the file you submit to Canvas.
+ 
+Replace each ANSWER: line with your response. Paste commands
+exactly as you ran them and output exactly as it printed. Do not delete the
+question headings. Quote every pattern with single quotes.
+ 
+================================================================
+PART 1 — Regex basics
+================================================================
+ 
+Q1. Count from  grep -c 'Dr.'  directory.csv :
+ANSWER:
+ 
+Count from  grep -c 'Dr\.' directory.csv :
+ANSWER:
+ 
+The extra line the first command matched:
+ANSWER:
+ 
+Why it matched:
+ANSWER:
+ 
+ 
+Q2. Your grep | wc -l command:
+ANSWER:
+ 
+Its output:
+ANSWER:
+ 
+What ^$ matches, in one sentence:
+ANSWER:
+ 
+ 
+Q3. YOUR PREDICTION — which count is bigger, and why
+    (write this BEFORE running anything):
+ANSWER:
+ 
+Count from  grep -o 'is' memo.txt | wc -l :
+ANSWER:
+ 
+Count from  grep -o '\<is\>' memo.txt | wc -l :
+ANSWER:
+ 
+Three different words the first pattern matched inside but the
+second didn't:
+ANSWER:
+ 
+Count after adding -i to the second command:
+ANSWER:
+ 
+Why it goes up by exactly one:
+ANSWER:
+ 
+ 
+Q4.
+1. YOUR PREDICTION for  grep -o '<.*>' tags.html
+   (write this BEFORE running it):
+ANSWER:
+ 
+   Actual output:
+ANSWER:
+ 
+   Explanation in terms of greediness:
+ANSWER:
+ 
+2. Inverted-character-class fix — command and output:
+ANSWER:
+ 
+ 
+3. Just the two bold elements — command and output:
+ANSWER:
+ 
+ 
+ 
+================================================================
+PART 2 — Regex on fields
+================================================================
+ 
+Q5. Your pipeline:
+ANSWER:
+ 
+Its output (names only):
+ANSWER:
+ 
+ 
+Q6.
+1. Which address is fake, and why did \> let it through?
+ANSWER:
+ 
+2. Your fixed command:
+ANSWER:
+ 
+   Its output (exactly 8 addresses, no commas):
+ANSWER:
+ 
+ 
+3. Why FA2006@drexel.edu is not in either list:
+ANSWER:
+ 
+ 
+Q7. Your command:
+ANSWER:
+ 
+Its output (names only):
+ANSWER:
+ 
+How your pattern is anchored to the start-date field:
+ANSWER:
+ 
+ 
+Q8.
+1. Your pattern and its  grep -c  count:
+ANSWER:
+ 
+2. Your -v command (no comment or blank lines in the output):
+ANSWER:
+ 
+   Its output:
+ANSWER:
+ 
+ 
+================================================================
+PART 3 — sed
+================================================================
+ 
+Q9. Your sed command (piped through head -3):
+ANSWER:
+ 
+Its output:
+ANSWER:
+ 
+ 
+Which sed option would change directory.csv itself, and why you
+don't want it here:
+ANSWER:
+ 
+ 
+================================================================
+PART 4 — AWK
+================================================================
+ 
+Q10. Your awk command (piped through sort):
+ANSWER:
+ 
+Its output:
+ANSWER:
+ 
+ 
+The two people your room regex excludes, and why:
+ANSWER:
+ 
