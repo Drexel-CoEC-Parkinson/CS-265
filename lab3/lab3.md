@@ -5,6 +5,7 @@
 ## Setup
 
 ```bash
+mkdir ~/CS265/lab3
 cd ~/CS265/materials && git pull
 cp -r lab3 ~/lab3 && cd ~/lab3
 cp lab3_template.txt lab3.txt
