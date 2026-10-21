@@ -15,7 +15,7 @@ Answer in `lab3.txt`. For each question, paste the **exact command** you ran and
 Use `grep -E` throughout. All questions except Q3 and Q4 use `directory.csv`, a fake department directory. Look at it first (`cat directory.csv`). It has comment lines, blank lines, and some messy entries on purpose.
 
 Columns: `name,title,email,phone,room,start`
-Error 'Scsi error - ILLEGAL REQUEST:READ OF SCRAMBLED SECTOR WITHOUT AUTHENTICATION' occurred while reading 'BD-RE ASUS BW-16D1X-U A105 KLLO2LE4317' at offset '1048576'
+
 > **Quote every pattern** with single quotes. Unquoted `|`, `*`, `$`, `(`, and `?` belong to the shell before grep ever sees them.
 
 ---
