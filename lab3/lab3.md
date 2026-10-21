@@ -37,6 +37,8 @@ Write **one** `grep` that prints only the people: no comment lines (lines starti
 
 Then explain in one sentence what `^$` matches.
 
+(Hint: look at the various grep options via the man page)
+
 ## Q3. Word anchors (10 pts)
 
 Use `memo.txt`. **Before running anything**, predict which of these gives the bigger number, and why:
