@@ -7,11 +7,8 @@ Groups are fine; everyone submits their own answers on Canvas (text entry) by **
 ## Setup (1 min)
 
 ```bash
-cd ~/CS265/materials && git pull
-mkdir ~/CS265/activity3
-cd ~CS265/materials
-cp -r activity3/* ~/CS265/activity3/
-cd ~/CS265/activity3
+cd ~/CS-265 && git pull
+cd activity3
 ```
 
 Each *hole* has two files:
