@@ -15,6 +15,7 @@ cp ~/CS265/materials/activity4/* ~/CS265/activity4/
 cd ~/CS265/activity4
 ```
 (Note - the folder /CS265/materials is where your repo is located. If your path name is different, such as "CS-265" or some variant, use what exists for you.)
+
 You have four small programs: `hello_world.c`, `status.c`, `fleas.c`, and `specs.c`.
 
 ## Part 1: Compile and run, two ways
