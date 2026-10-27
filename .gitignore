@@ -11,3 +11,4 @@ lab*/lab*.txt
 lab*/vi_lab.txt
 lab*/roundtrip.txt
 lab*/box/
+!lab*/lab*_template.txt
