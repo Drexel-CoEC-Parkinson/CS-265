@@ -1,0 +1,181 @@
+CS-265 Lab 4 — From Source to Executable
+Answer Template
+
+Name:
+Drexel username:
+Section:
+
+Instructions: Rename this file to lab4.txt before you start:
+
+    mv lab4_template.txt lab4.txt
+
+lab4.txt is the file you submit to Canvas, along with temp.c,
+temp.h, and main.c.
+
+Replace each ANSWER: line with your response. Paste commands
+exactly as you ran them and output exactly as it printed. Do not delete the
+question headings. Where a question says PREDICT, write the prediction
+BEFORE you run anything.
+
+================================================================
+PART 1 — The preprocessor
+================================================================
+
+Q1.
+1. Line count of hello_world.c:
+ANSWER:
+
+   Line count after gcc -E:
+ANSWER:
+
+   Where the extra lines came from:
+ANSWER:
+
+2. Your command, and the line that declares printf:
+ANSWER:
+
+   Why the compiler needs it before your call:
+ANSWER:
+
+3. Output of  gcc -E hello_world.c | grep -c Kernighan , and why:
+ANSWER:
+
+
+Q2. YOUR PREDICTION for the body of main after preprocessing:
+ANSWER:
+
+1. Actual output, and what happened to FREEZING_PT:
+ANSWER:
+
+2. Why each of the two missing printf calls disappeared:
+ANSWER:
+
+3. Output of freeze.c with SHOW_EXTRA set to 1:
+ANSWER:
+
+4. Why /* ... */ would not have commented out the block cleanly:
+ANSWER:
+
+
+================================================================
+PART 2 — Compiling and assembling
+================================================================
+
+Q3.
+1. Output of  grep -E 'string|call' hello_world.s :
+ANSWER:
+
+2. The function actually called, and what happened to the \n:
+ANSWER:
+
+3. Why the compiler is allowed to do this:
+ANSWER:
+
+
+Q4.
+1. Output of file and ls -l:
+ANSWER:
+
+   Two differences between hello_world.o and hello_world:
+ANSWER:
+
+2. What happens when you run ./hello_world.o:
+ANSWER:
+
+3. Output of  nm hello_world.o :
+ANSWER:
+
+   The U symbol, and who supplies it at link time:
+ANSWER:
+
+
+================================================================
+PART 3 — Linking
+================================================================
+
+Q5.
+1. Output of ./tconv:
+ANSWER:
+
+2. Output of  nm main.o  and  nm temp.o :
+ANSWER:
+
+   How the linker connects main.o's call to temp.o's code:
+ANSWER:
+
+
+Q6. (Submit your edited temp.c, temp.h, and main.c too.)
+4. Output of ./tconv after your changes:
+ANSWER:
+
+5. Shortest rebuild after changing only temp.c, and why main.c
+   doesn't need recompiling:
+ANSWER:
+
+6. Which .o files are out of date after editing temp.h, and why:
+ANSWER:
+
+
+Q7.
+1. The error:
+ANSWER:
+
+2. Which program printed it, and which step failed:
+ANSWER:
+
+3. Why  gcc -c main.c  succeeded in Q5:
+ANSWER:
+
+
+Q8.
+1. Did it compile? Did it link? First warning, and ./noproto output:
+ANSWER:
+
+2. What the compiler assumed c_to_f returns:
+ANSWER:
+
+3. Why the linker didn't notice the mismatch:
+ANSWER:
+
+
+Q9.
+1. Error from the first command, and which step failed:
+ANSWER:
+
+2. Why #include <math.h> isn't enough:
+ANSWER:
+
+3. Why the second command fails and the third works:
+ANSWER:
+
+
+================================================================
+PART 4 — Error triage
+================================================================
+
+Q10. For each file: key error line / step that failed /
+     evidence / one-line fix.
+
+err1.c
+  Error:
+  Step:
+  Evidence:
+  Fix:
+
+err2.c
+  Error:
+  Step:
+  Evidence:
+  Fix:
+
+err3.c
+  Error:
+  Step:
+  Evidence:
+  Fix:
+
+err4.c
+  Error:
+  Step:
+  Evidence:
+  Fix:
