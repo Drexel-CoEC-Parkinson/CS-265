@@ -1,0 +1,187 @@
+CS-265 Lab 5 — Types, I/O, and Your First C Programs
+Answer Template
+
+Name:
+Drexel username:
+Section:
+
+Instructions: Rename this file to lab5.txt before you start:
+
+    mv lab5_template.txt lab5.txt
+
+lab5.txt is the file you submit to Canvas, along with leap.c, ult.c,
+urt.c, readlines.c, and rev-array.c.
+
+Replace each ANSWER: line with your response. Paste commands
+exactly as you ran them and output exactly as it printed. Do not delete the
+question headings. Where a question says PREDICT, write the prediction
+BEFORE you run anything.
+
+================================================================
+PART 1 — Types
+================================================================
+
+Q1.
+1. PREDICT the size of each type:
+ANSWER:
+
+2. Output of ./sizes, and any wrong predictions:
+ANSWER:
+
+3. Why the short went negative and the unsigned went huge:
+ANSWER:
+
+4. Why sizes.c uses sizeof, and how a 2-byte int could break a program:
+ANSWER:
+
+
+Q2.
+1. PREDICT lines A through J:
+ANSWER:
+
+2. Output of ./arith:
+ANSWER:
+
+3. Why A is 0 but B is 18:
+ANSWER:
+
+4. The difference between F and G:
+ANSWER:
+
+5. Why H is 0, and what to write instead of ==:
+ANSWER:
+
+6. Why J printed a different number:
+ANSWER:
+
+7. Your fixed line and the new output:
+ANSWER:
+
+
+Q3.
+1. PREDICT lines A through K:
+ANSWER:
+
+2. Output of ./chars:
+ANSWER:
+
+3. Why subtracting 32 works, and why c - ('a' - 'A') is better:
+ANSWER:
+
+4. The fourth char in "abc":
+ANSWER:
+
+5. Your expression:
+ANSWER:
+
+
+================================================================
+PART 2 — Conditions and loops
+================================================================
+
+Q4.
+1. PREDICT lines 1 through 9:
+ANSWER:
+
+2. The two warnings and the output of ./exprs:
+ANSWER:
+
+3. Line 5 rewritten with parentheses:
+ANSWER:
+
+4. Why 3 > 2 > 1 is 0:
+ANSWER:
+
+5. Why line 9 doesn't crash:
+ANSWER:
+
+6. PREDICT loops 1, 2, and 3:
+ANSWER:
+
+   Actual output:
+ANSWER:
+
+7. Why loop 2's body ran:
+ANSWER:
+
+8. The bug in loop 3, and how the warning points at it:
+ANSWER:
+
+9. Output of ./loops 4 | head -10, and why it never reaches 0:
+ANSWER:
+
+
+================================================================
+PART 3 — Input and output
+================================================================
+
+Q5.
+1. PREDICT lines A through M:
+ANSWER:
+
+2. Output of ./fmt:
+ANSWER:
+
+3. What line L tells you about width:
+ANSWER:
+
+4. Your printf call:
+ANSWER:
+
+5. Warnings and output for fmtbad.c:
+ANSWER:
+
+   The rule, and why you can't trust the numbers:
+ANSWER:
+
+
+Q6.
+1. PREDICT the output for each of the four runs:
+ANSWER:
+
+   Actual output:
+ANSWER:
+
+2. Why &a and &b:
+ANSWER:
+
+3. Output of the scanloop command:
+ANSWER:
+
+   What happened at the x, and why the loop never finished:
+ANSWER:
+
+4. Output of the readint command:
+ANSWER:
+
+   Why this version gets past the x:
+ANSWER:
+
+
+================================================================
+PART 4 — Write your own
+================================================================
+
+Q7. (Submit leap.c too.) Fill in EXPECTED before you run the program.
+
+Year    EXPECTED (leap or not)    ACTUAL OUTPUT
+1900
+2000
+2024
+2025
+2100
+
+
+Q8. (Submit ult.c and urt.c too.)
+Spaces and stars in row r of urt, for height h:
+ANSWER:
+
+
+Q9. (Submit readlines.c too.)
+Why min = 0 is wrong, and an input that shows it:
+ANSWER:
+
+
+Q10. (Submit rev-array.c too.)
+What could go wrong without the check, and would the compiler warn you:
+ANSWER:
