@@ -1,0 +1,29 @@
+Log report
+==========
+Lines read:      12
+Valid entries:   12
+Malformed lines: 0
+Total bytes:     100
+Average bytes:   8.3
+Distinct paths:  8
+
+Status classes
+  1xx: 1
+  2xx: 9
+  3xx: 1
+  4xx: 0
+  5xx: 1
+
+Requests by hour
+  00: 3
+  07: 3
+  12: 3
+  23: 3
+Busiest hour: 00 (3 requests)
+
+Top 5 paths
+      2  /alpha.html
+      2  /beta.html
+      2  /delta.html
+      2  /zeta.html
+      1  /About.html

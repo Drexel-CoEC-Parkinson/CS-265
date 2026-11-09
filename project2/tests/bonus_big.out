@@ -1,0 +1,49 @@
+Log report
+==========
+Lines read:      9195
+Valid entries:   9152
+Malformed lines: 43
+Total bytes:     2417558683
+Average bytes:   264156.3
+Distinct paths:  1567
+
+Status classes
+  1xx: 0
+  2xx: 7347
+  3xx: 1192
+  4xx: 444
+  5xx: 169
+
+Requests by hour
+  00: 212
+  01: 63
+  02: 73
+  03: 89
+  04: 70
+  05: 73
+  06: 143
+  07: 212
+  08: 358
+  09: 478
+  10: 532
+  11: 666
+  12: 697
+  13: 719
+  14: 675
+  15: 582
+  16: 566
+  17: 486
+  18: 495
+  19: 537
+  20: 556
+  21: 408
+  22: 309
+  23: 153
+Busiest hour: 13 (719 requests)
+
+Top 5 paths
+     25  /members/6378/profile.html
+     24  /members/7561/profile.html
+     23  /members/6660/profile.html
+     23  /members/9901/profile.html
+     22  /members/3020/profile.html

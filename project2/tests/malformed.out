@@ -1,0 +1,25 @@
+Log report
+==========
+Lines read:      19
+Valid entries:   5
+Malformed lines: 14
+Total bytes:     1100
+Average bytes:   220.0
+Distinct paths:  3
+
+Status classes
+  1xx: 0
+  2xx: 4
+  3xx: 0
+  4xx: 1
+  5xx: 0
+
+Requests by hour
+  08: 3
+  09: 2
+Busiest hour: 08 (3 requests)
+
+Top 5 paths
+      2  /about.html
+      2  /index.html
+      1  /tabs.html

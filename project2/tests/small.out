@@ -1,0 +1,29 @@
+Log report
+==========
+Lines read:      15
+Valid entries:   13
+Malformed lines: 2
+Total bytes:     290695
+Average bytes:   22361.2
+Distinct paths:  6
+
+Status classes
+  1xx: 0
+  2xx: 9
+  3xx: 2
+  4xx: 1
+  5xx: 1
+
+Requests by hour
+  09: 4
+  10: 3
+  13: 4
+  14: 2
+Busiest hour: 09 (4 requests)
+
+Top 5 paths
+      4  /index.html
+      3  /events.html
+      2  /css/style.css
+      2  /signup
+      1  /favicon.ico
