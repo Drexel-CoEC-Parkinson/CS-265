@@ -1,7 +1,6 @@
 # CS-265: Advanced Programming Tools & Techniques
 ## Project 2: `logreport`, a Log Summary Tool in C
 
-**Due:** Wednesday, December 9, 2026, 11:59 PM (submitted on Canvas)
 **Points:** 100 (15% of course grade), plus up to 10 bonus points
 **Late policy:** −10% / −20% / −30% per day late; not accepted after 4 days without prior discussions with me.
 
