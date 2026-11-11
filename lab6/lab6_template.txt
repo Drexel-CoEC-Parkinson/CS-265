@@ -1,0 +1,171 @@
+CS-265 Lab 6 — Branches, Functions, and Arrays
+Answer Template
+
+Name:
+Drexel username:
+Section:
+
+Instructions: Rename this file to lab6.txt before you start:
+
+    mv lab6_template.txt lab6.txt
+
+lab6.txt is the file you submit to Canvas, along with power.c,
+grades.c, arrstats.c, and bugs.c.
+
+Replace each ANSWER: line with your response. Paste commands
+exactly as you ran them and output exactly as it printed. Do not delete the
+question headings. Where a question says PREDICT, write the prediction
+BEFORE you run anything.
+
+================================================================
+PART 1 — Branches
+================================================================
+
+Q1.
+1. PREDICT all six lines of output:
+ANSWER:
+
+2. The warning, and the output of ./switch:
+ANSWER:
+
+3. Why describe(1) prints two words, and the line the warning points at:
+ANSWER:
+
+4. Why cases 3 and 4 sharing code is fine:
+ANSWER:
+
+5. Your fixed case 1, and confirmation the warning is gone:
+ANSWER:
+
+
+================================================================
+PART 2 — Functions
+================================================================
+
+Q2.
+1. PREDICT the output:
+ANSWER:
+
+2. Output of ./scope:
+ANSWER:
+
+3. What static changes:
+ANSWER:
+
+4. Why bump doesn't see main's count:
+ANSWER:
+
+5. The error, and why i is gone:
+ANSWER:
+
+
+Q3.
+1. PREDICT the output:
+ANSWER:
+
+2. The warning, and the output of ./byvalue:
+ANSWER:
+
+3. Why the swap doesn't reach main:
+ANSWER:
+
+4. What the warning about reset is telling you:
+ANSWER:
+
+5. Your changed reset function and changed call:
+ANSWER:
+
+
+================================================================
+PART 3 — Arrays
+================================================================
+
+Q4.
+1. PREDICT lines A through E:
+ANSWER:
+
+2. Output of ./arrays:
+ANSWER:
+
+3. The other two elements of a, and why:
+ANSWER:
+
+4. Why sizeof b / sizeof b[0] gives the number of elements:
+ANSWER:
+
+5. The error, and how to copy an array instead:
+ANSWER:
+
+6. What happens with a[5] = 99:
+ANSWER:
+
+
+Q5.
+1. PREDICT the output:
+ANSWER:
+
+2. The warning, and the output of ./arrfunc:
+ANSWER:
+
+3. What's different about what fill received:
+ANSWER:
+
+4. Why fill and sum need n:
+ANSWER:
+
+5. Which number is the array's size:
+ANSWER:
+
+
+================================================================
+PART 4 — Command-line arguments
+================================================================
+
+Q6.
+1. PREDICT the output of the four commands:
+ANSWER:
+
+2. Actual output:
+ANSWER:
+
+3. Output of ./args *.c and ./args '*.c', and who expanded *.c:
+ANSWER:
+
+4. Why you can't do arithmetic on argv[1], and your line:
+ANSWER:
+
+
+================================================================
+PART 5 — Write your own
+================================================================
+
+Q7. (Submit power.c too.)
+Output of ./power 2 62 and ./power 2 64, and why 2^64 is wrong:
+ANSWER:
+
+
+Q8. (Submit grades.c too.)
+The scores you used to test each grade boundary:
+ANSWER:
+
+Why the order of the if tests in letter_grade matters:
+ANSWER:
+
+
+Q9. (Submit arrstats.c too.)
+Why reverse loops n / 2 times, and what n times would do:
+ANSWER:
+
+
+Q10. (Submit your fixed bugs.c too.)
+1. Output of the original bugs.c, and whether the compiler warned:
+ANSWER:
+
+2. The ERROR line, the bugs.c line it names, and what is wrong there:
+ANSWER:
+
+3. Output after both fixes:
+ANSWER:
+
+4. The second bug, explained:
+ANSWER:
