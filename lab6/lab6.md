@@ -24,7 +24,7 @@ Compile everything with the **course compile line**:
 gcc -Wall -Wextra -g -std=c99 file.c -o file
 ```
 
-Some starter programs produce warnings on purpose. The questions ask about them.
+Some starter programs produce warnings on purpose. The questions ask about them. `arrstats.c` also warns until you write its functions in Q9.
 
 ---
 
@@ -35,7 +35,7 @@ Some starter programs produce warnings on purpose. The questions ask about them.
 `switch.c` calls `describe(n)` for `n` from 0 to 5.
 
 1. **PREDICT** all six lines of output.
-2. Compile `switch.c` and paste the warning. Run it and paste the output.
+2. Compile `switch.c` and paste the warning, including the `note:` line under it. Run it and paste the output.
 3. Why does `describe(1)` print two words? Which line does the warning point at?
 4. Cases 3 and 4 share code with no `break` between their labels, but the compiler doesn't warn about that. Why is that one fine?
 5. Fix `switch.c` so `describe(1)` prints only `one`. Recompile. Paste your fixed `case 1` and confirm the warning is gone.
@@ -72,8 +72,8 @@ Some starter programs produce warnings on purpose. The questions ask about them.
 2. Compile and run it. Paste the output.
 3. `a` has 5 elements, but only 3 values are listed. What are the other two, and why?
 4. Line B prints a size in bytes. Explain why `sizeof b / sizeof b[0]` in line C gives the number of elements.
-5. Add the line `a = b;` near the end of `main` and compile. Paste the error. How would you copy one array into another instead? Then remove the line.
-6. If you wrote `a[5] = 99;`, would C stop you? What actually happens?
+5. Add the line `a = b;` just above `return 0;` in `main` and compile. Paste the error. How would you copy one array into another instead? Then remove the line.
+6. In the same spot, add `a[5] = 99;` instead, then compile and run. Did the compiler or the program stop you? Is that line correct? Explain. Then remove the line.
 
 ## Q5. Passing arrays to functions (10 pts)
 
@@ -141,8 +141,10 @@ Exponent must be 0 or more
 ```
 
 - If there aren't exactly two arguments, print `Usage: power BASE EXP` and return `1`.
-- If either argument isn't a whole number, print `Not a number` and return `1`.
+- If `sscanf` can't read a number from either argument, as with `x`, print `Not a number` and return `1`. You don't need to reject arguments like `2.5` or `3abc`. `sscanf` reads the leading `2` or `3`, and that's acceptable.
 - If the exponent is negative, print `Exponent must be 0 or more` and return `1`.
+- Otherwise, print the result in the format shown and return `0`.
+- Read the base with `%ld`, because it's a `long`. Read the exponent with `%d`.
 
 In your template, paste the output of `./power 2 62` and `./power 2 64`. Explain the second one. (Lab 5, Q1.)
 
@@ -165,15 +167,17 @@ A:2 B:1 C:1 D:0 F:1
 ```
 
 - A line that isn't a number prints `skipping: ` followed by the line.
-- A score below 0 or above 100 prints `out of range: ` and the score, and isn't counted.
+- A score below 0 or above 100 prints `out of range: ` followed by the score, as in `out of range: 105`, and isn't counted.
 - **Count the grades with a `switch` on the letter.**
-- Always print the summary line, even if there were no scores.
+- Always print the summary line, in exactly the format shown, even if there were no scores.
 
 In your template, list the scores you used to test the edge of each grade, and explain why the order of your `if` tests in `letter_grade` matters. (Activity 5, Part 1.)
 
 ## Q9. `arrstats.c` (10 pts)
 
-`arrstats.c` comes with `main` already written. It reads integers into an array, using the same rules as Lab 5's `rev-array.c`, and then calls five functions. **Write those five functions. Don't change `main` or the prototypes.**
+`arrstats.c` comes with `main` already written. It reads integers into an array, then calls five functions. It reads input by the same rules as Lab 5's `rev-array.c`: one number per line, a non-number prints `skipping:`, and a blank line, end of input, or the 100-value limit stops the reading. **Write those five functions. Don't change `main` or the prototypes.** Do fill in your name in the header comment.
+
+The starter compiles now, but with `unused parameter` warnings. Each warning goes away when you write that function, and the finished file must have none.
 
 | Function | Does |
 |---|---|
@@ -196,7 +200,7 @@ Reversed: 2 6 1 9 4
 - `mean` must return the exact average. Watch out for integer division.
 - Check for a trailing space with `./arrstats < nums.txt | cat -A`. The last line should end in `4$`.
 
-In your template, explain why `reverse`'s loop runs `n / 2` times, not `n` times. What would happen with `n` iterations?
+In your template, explain how many swaps `reverse` needs for `n` values, and why. What would happen if it swapped `n` times instead?
 
 ## Q10. `bugs.c` (10 pts)
 
@@ -210,8 +214,8 @@ In your template, explain why `reverse`'s loop runs `n / 2` times, not `n` times
    ./bugs
    ```
 
-   Paste the line that starts with `ERROR`, and the first line below it that names `bugs.c` and a line number. Which line of `bugs.c` is it, and what's wrong with it?
-3. Fix both bugs. The second one isn't a memory bug, so AddressSanitizer won't find it. Think about Lab 5, Q9. Rebuild with the course compile line, run it, and paste the correct output.
+   The report is long. Near the top, find the line containing `ERROR: AddressSanitizer`, and below it the first line that names `bugs.c` and a line number. Paste both lines. Which line of `bugs.c` is it, and what's wrong with it?
+3. Fix both bugs. The second one isn't a memory bug, so AddressSanitizer won't find it. Think about Lab 5, Q9. Rebuild with the course compile line, run it, and paste the correct output. Then rebuild once more with `-fsanitize=address` and run it, to confirm that AddressSanitizer reports nothing.
 4. Explain the second bug.
 
 ---

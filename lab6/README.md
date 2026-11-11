@@ -7,9 +7,9 @@ Files for Lab 6 (Branches, Functions, and Arrays). Instructions are in `lab6.md`
 | `lab6.md` | The lab handout |
 | `lab6_template.txt` | Rename to `lab6.txt` and answer there |
 | `switch.c` | Q1 (you edit this) |
-| `scope.c` | Q2 |
+| `scope.c` | Q2 (you edit this, then undo it) |
 | `byvalue.c` | Q3 |
-| `arrays.c` | Q4 (you edit this) |
+| `arrays.c` | Q4 (you edit this, then undo it) |
 | `arrfunc.c` | Q5 |
 | `args.c` | Q6 |
 | `scores.txt` | Q8 test input |
