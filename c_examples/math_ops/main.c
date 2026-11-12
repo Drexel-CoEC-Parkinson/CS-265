@@ -1,6 +1,6 @@
 // main.c
 #include <stdio.h>
-#include "09-math_operations.h"
+#include "math_operations.h"
 
 int main() {
     int a = 10, b = -5;

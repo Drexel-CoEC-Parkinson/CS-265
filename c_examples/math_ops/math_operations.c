@@ -1,11 +1,8 @@
 // math_operations.c
-#include "09-math_operations.h"
+#include "math_operations.h"
 #include <stdio.h>
 
 int add(int a, int b) {
-    if(a < 0 || b < 0){
-        return 0;
-    }
     return a + b;
 }
 
