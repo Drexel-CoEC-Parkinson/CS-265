@@ -1,0 +1,5 @@
+Hello, World
+pointers are fun
+racecar
+No
+x

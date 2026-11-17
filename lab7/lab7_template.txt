@@ -1,0 +1,165 @@
+CS-265 Lab 7 — Pointers, Strings, and the Heap
+Answer Template
+
+Name:
+Drexel username:
+Section:
+
+Instructions: Rename this file to lab7.txt before you start:
+
+    mv lab7_template.txt lab7.txt
+
+lab7.txt is the file you submit to Canvas, along with your fixed strbugs.c,
+leaky.c, and vbugs.c, and your strfuncs.c, lines.c, and minmax.c.
+
+Replace each ANSWER: line with your response. Paste commands
+exactly as you ran them and output exactly as it printed. Do not delete the
+question headings. Where a question says PREDICT, write the prediction
+BEFORE you run anything.
+
+================================================================
+PART 1 — Pointers
+================================================================
+
+Q1.
+1. PREDICT lines A through H:
+ANSWER:
+
+2. Output of ./ptrs:
+ANSWER:
+
+3. The type of q, why, and how to declare two pointers on one line:
+ANSWER:
+
+4. Why A and B differ, and which operator happens first in *p + 1:
+ANSWER:
+
+5. Which element p[1] reads in line G, and why:
+ANSWER:
+
+
+Q2.
+1. PREDICT both lines:
+ANSWER:
+
+2. Output of ./divide:
+ANSWER:
+
+3. Why main passes &q and &r:
+ANSWER:
+
+4. The first warning line, and what divide would do with q and r:
+ANSWER:
+
+
+================================================================
+PART 2 — Strings
+================================================================
+
+Q3.
+1. PREDICT lines A through J:
+ANSWER:
+
+2. Output of ./strs:
+ANSWER:
+
+3. Why A and B differ, and why C and D differ:
+ANSWER:
+
+4. Why the t in word[2] isn't printed, and why strlen agrees:
+ANSWER:
+
+5. The warning, what == compares, and what to use instead:
+ANSWER:
+
+
+Q4.
+1. Output of ./strbugs:
+ANSWER:
+
+2. The #0 and #1 lines from bt:
+ANSWER:
+
+3. Which line crashed, and which call in main led there:
+ANSWER:
+
+4. The difference between char first[] and char *second:
+ANSWER:
+
+5. The line you changed:
+ANSWER:
+
+
+================================================================
+PART 3 — The heap
+================================================================
+
+Q5.
+1. PREDICT, then the output of ./heap 5:
+ANSWER:
+
+2. Why multiply by sizeof(int):
+ANSWER:
+
+3. Why make_squares and main both check for NULL:
+ANSWER:
+
+4. Why make_squares can't return a local array:
+ANSWER:
+
+5. The two summary lines, and whether it's clean:
+ANSWER:
+
+
+================================================================
+PART 4 — valgrind
+================================================================
+
+Q6.
+1. What the 8th byte is for:
+ANSWER:
+
+2. PREDICT the total bytes leaked:
+ANSWER:
+
+3. The definitely lost: line, and whether you were right:
+ANSWER:
+
+4. The line you added and where, and the two summary lines:
+ANSWER:
+
+
+Q7.
+1. The gcc warning:
+ANSWER:
+
+2. The full valgrind report:
+ANSWER:
+
+3. Each of the four errors: its kind and its vbugs.c line:
+ANSWER:
+
+4. Which two errors come from the same bug, and the bug:
+ANSWER:
+
+5. The two summary lines after your fixes:
+ANSWER:
+
+
+================================================================
+PART 5 — Write your own
+================================================================
+
+Q8. (Submit strfuncs.c too.)
+Why str_dup asks for strlen(s) + 1 bytes:
+ANSWER:
+
+
+Q9. (Submit lines.c too.)
+Why you can't store line itself in lines[count], and what every entry would point to:
+ANSWER:
+
+
+Q10. (Submit minmax.c too.)
+Why min_max takes int *min and int *max instead of returning a value:
+ANSWER:
